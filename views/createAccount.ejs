@@ -1,0 +1,24 @@
+<%- include('templates/header.ejs') %>
+<%- include('templates/nav.ejs') %>
+
+<main>
+
+    <form id="createAccount" action="/createaccount" method="post">
+        <p>Create a New Account</p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="name..." required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="user@domain.com" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="xxxxxxxx..." required>
+
+        <label for="passwordConfirm">Confirm password:</label>
+        <input type="password" name="passwordConfirm" id="xxxxxxxx" required>
+
+        <input type="submit" id="newUser" class="btn" value="Submit">
+    </form>
+</main>
+
+<%- include('templates/footer.ejs') %>

@@ -1,0 +1,146 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gridContainer {
+    display: grid;
+}
+
+header {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+}
+
+.navitem {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.navitem a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 20px 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.content > div {
+    border: 10px solid #ddd;
+    padding: 20px;
+}
+
+.dataTable {
+    margin: 10px 0;
+}
+
+.dataTable img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+/* CONTACT FORM */
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button, .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+/* =============== 768 =============== */
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+/* 768 */
+/* =============== 992 =============== */
+@media screen and (min-width: 992px) {
+
+}
+
+/* 992 */
+/* =============== 1200 =============== */
+@media screen and (min-width: 1200px) {
+
+}

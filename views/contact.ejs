@@ -1,0 +1,36 @@
+<%- include('templates/header.ejs') %>
+    <%- include('templates/nav.ejs') %>
+
+        <main>
+
+            <section>
+                <h2>GGMJ BLOG</h2>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: info@blog.com</p>
+                <p>Address: 123 Main Street, Madrid, Spain</p>
+            </section>
+
+            <h3>Contact Us</h3>
+            <div>
+                <form action="submit_form.php" method="post">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+
+        <%- include('templates/footer.ejs') %>

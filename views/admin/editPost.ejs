@@ -1,0 +1,28 @@
+<%- include('../templates/header.ejs') %>
+<%- include('../templates/nav') %>
+
+<main>
+
+    <h2>Edit Post</h2>
+
+    <form id="editPost" action="/admin/updatepost/<%=post._id%>" method="post">
+
+    <p>Edit a Blog-Post</p>
+    <h3><%= post._id %></h3>
+
+    <label for="title">Title</label>
+    <input type="text" value="<%= post.title %>" name="title">
+
+    <label for="content">Post</label>
+    <textarea name="content" id="" cols="30" rows="10"><%= post.content %></textarea>
+
+    <label for="image">Image</label>
+    <input type="file" value="<%= post.image?.src %>" name="image">
+
+    <button type="submit" id="newPost" class="btn">Submit</button>
+
+</form>
+
+</main>
+
+<%- include('../templates/footer.ejs') %>

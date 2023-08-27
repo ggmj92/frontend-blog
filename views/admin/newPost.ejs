@@ -1,0 +1,30 @@
+<%- include('../templates/header.ejs') %>
+    <%- include('../templates/nav.ejs') %>
+
+        <main>
+
+            <h2>New Post</h2>
+
+            <form id="newPost" action="/admin/createpost" method="post">
+
+                <p>Publish a New Blog-Post</p>
+
+                <label for="title">Title</label>
+                <input type="text" placeholder="title" name="title">
+
+                <label for="date">Date</label>
+                <input type="datetime-local" placeholder="date" name="date">
+
+                <label for="content">Post</label>
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+
+                <label for="image">Image</label>
+                <input type="file" placeholder="image" name="image">
+
+                <button type="submit" id="newPost" class="btn">Add Post</button>
+
+            </form>
+
+        </main>
+
+        <%- include('../templates/footer.ejs') %>

@@ -1,0 +1,24 @@
+<%- include('templates/header.ejs') %>
+    <%- include('templates/nav.ejs') %>
+
+        <main>
+
+            <div>
+                <h2>
+                    <%= post.title %>
+                </h2>
+                <p>
+                    <%= post.date %>
+                </p>
+                <p>
+                    <%= post.author.name%>
+                </p>
+                <img class="post-image" src="<%= post.image?.src %>" alt="<%= post.image?.alt %>">
+                <p>
+                    <%= post.content %>
+                </p>
+            </div>
+
+        </main>
+
+        <%- include('templates/footer') %>

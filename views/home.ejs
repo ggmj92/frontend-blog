@@ -1,0 +1,45 @@
+<%- include('templates/header.ejs') %>
+    <%- include('templates/nav.ejs') %>
+
+        <main>
+
+            <h2>Home</h2>
+            <%- include('templates/search.ejs', {user}) %>
+
+                <section>
+                    <div class="content">
+                        <% posts.forEach(element=> { %>
+
+                            <% console.log(element) %>
+                            <div>
+                                <h4 class="dataTable">
+                                    <%= element.title %>
+                                </h4>
+                                <p class="dataTable">
+                                    <%= element.author.name %>
+                                </p>
+                                <p class="dataTable">
+                                    <%= element.date %>
+                                </p>
+
+                                <p class="dataTable">
+                                    <%= element.content.slice(0, 50) %>...
+                                </p>
+
+                                <img class="dataTable" src="<%= element.image?.src %>">
+
+                                <a href="/search/<%= element._id %>"><button id="btn" class="btn"
+                                        data-id="<%= element._id %>">Read More</button></a>
+                            </div>
+
+                            <% }) %>
+
+                    </div>
+
+                </section>
+
+        </main>
+
+
+
+        <%- include('templates/footer.ejs') %>
