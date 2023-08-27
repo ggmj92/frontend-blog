@@ -1,0 +1,61 @@
+<%- include('../templates/header.ejs') %>
+<%- include('../templates/nav.ejs') %>
+
+    <main>
+        <h2>CONTROL PANEL</h2>
+
+        <%- include('../templates/search.ejs', {user}) %>
+
+            <div class="tableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title:</th>
+                            <th>Author:</th>
+                            <th>Date:</th>
+                            <th>Text Content:</th>
+                            <th>Image:</th>
+                            <th>Id:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% if (posts.length> 0) { %>
+                            <% posts.forEach(element=> { %>
+                                <tr>
+                                    <td class="dataTable">
+                                        <%= element.title %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element.author.name %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element.date %>
+                                    </td>
+
+                                    <td class="dataTable">
+                                        <%= element.content %>
+                                    </td>
+
+                                    <td class="dataTable">
+                                        <%= element.image?.src %>
+                                    </td>
+
+                                    <td class="dataTable">
+                                        <%= element._id %>
+                                    </td>
+
+                                    <td><a href="/admin/updatepost/<%= element._id %>" class="btn">Edit Blog Post</a>
+                                    </td>
+                                    <td><button id="btnDelete" class="btn" data-id="<%= element._id %>">Delete</button></td>
+                                </tr>
+
+
+                                <% }) %>
+                                    <% } %>
+                    </tbody>
+                </table>
+
+            </div>
+    </main>
+    <%- include('../templates/footer.ejs') %>

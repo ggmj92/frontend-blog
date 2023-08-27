@@ -1,0 +1,54 @@
+<%- include('../templates/header.ejs') %>
+<%- include('../templates/nav.ejs') %>
+
+    <main>
+        <h2>Edit User</h2>
+
+            <div class="tableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name: </th>
+                            <th>Email:</th>
+                            <th>Admin:</th>
+                            <th>id:</th>
+                            <th>Date Created:</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% if (posts.length> 0) { %>
+                            <% posts.forEach(element=> { %>
+                                <tr>
+                                    <td class="dataTable">
+                                        <%= element.name %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element.email %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element.isAdmin %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element._id %>
+                                    </td>
+                                    <td class="dataTable">
+                                        <%= element.date %>
+                                    </td>
+
+                                    <td><a href="/admin/editPost/<%= element.title %>" class="btn">Edit User</a>
+                                    </td>
+                                    <td><button id="btn" class="btn" data-id="<%= element._id %>"></button>Delete User</td>
+                                </tr>
+
+
+                                <% }) %>
+                                    <% } %>
+                    </tbody>
+                </table>
+
+            </div>
+    </main>
+    <%- include('../templates/footer.ejs') %>

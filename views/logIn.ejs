@@ -1,0 +1,21 @@
+<%- include('templates/header.ejs') %>
+<%- include('templates/nav.ejs') %>
+
+<main>
+
+    <form id="logIn" action="/login" method="post">
+        <p>Log In</p>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="user@domain.com" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="xxxxxxxx..." required>
+
+        <input type="submit" id="logIn" class="btn" value="Log In">
+    </form>
+</main>
+
+
+
+<%- include('templates/footer.ejs') %>
